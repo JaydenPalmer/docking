@@ -13,7 +13,7 @@ document.addEventListener(
             // Start a counter variable at 0
             let shipCounter = 0
             // Iterate all of the shipping ships
-            const shippingShips = getCargoShips()
+            const shippingShips = getCargoShips
 
             for (const ship of shippingShips) {
                 // Does the haulerId foreign key match the id?
@@ -30,7 +30,9 @@ document.addEventListener(
 
 
 export const HaulList = () => {
-    const haulers = getHaulingShips()
+    const haulers = getHaulingShips
+
+    haulers.sort((a, b) => a.name.localeCompare(b.name))
 
     let haulerHTML = "<ul>"
 

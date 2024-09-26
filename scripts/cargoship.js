@@ -14,7 +14,7 @@ document.addEventListener(
             const shipId = itemClicked.dataset.id
             // Define a default object for the found hauler
             let haulingShip = { name: "Incorrect" }
-            const haulingShips = getHaulingShips()
+            const haulingShips = getHaulingShips
             // Iterate the array of hauler objects
                 for (const hauler of haulingShips) {
                     haulingShip = hauler
@@ -37,7 +37,9 @@ document.addEventListener(
 
 
 export const ShipList = () => {
-    const ships = getCargoShips()
+    const ships = getCargoShips
+
+    ships.sort((a, b) => a.name.localeCompare(b.name))
 
     let shipHTML = "<ul>"
 
